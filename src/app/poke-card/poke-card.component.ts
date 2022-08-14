@@ -15,11 +15,10 @@ export class PokeCardComponent implements OnInit {
   }
 
   creoClase(tipo1 :any, tipo2:any){
-    console.log(this.pkmn.id)
     if(tipo2 == undefined){
-      return tipo1+"-top " + tipo1+"-left " + tipo1+"-right " + tipo1+"-bottom"
+      return tipo1+"-primario " + tipo1+"-secundario"
     } else {
-      return tipo1+"-top " + tipo1+"-left " + tipo2.type.name+"-right " + tipo2.type.name+"-bottom"
+      return tipo1+"-primario " + tipo2.type.name+"-secundario"
     }
   }
 }
