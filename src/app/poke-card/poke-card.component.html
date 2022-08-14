@@ -1,6 +1,7 @@
-<div  class="text-center p-2" [ngClass]="creoClase(pkmn.types[0].type.name, pkmn.types[1])">
+<div class="text-center p-2" [ngClass]="creoClase(pkmn.types[0].type.name, pkmn.types[1])">
     <div>
-        <img style="height: 240px;" class="w-100" src="{{pkmn.sprites.other.dream_world.front_default}}" [routerLink]="['/pokemon/', pkmn.id]">
+        <img style="height: 240px;" class="w-100" 
+        src="{{'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pkmn.id + '.png'}}" [routerLink]="['/pokemon/', pkmn.id]">
     </div>
     <strong>
         {{pkmn.name | titlecase}}
