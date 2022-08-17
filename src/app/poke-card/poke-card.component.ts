@@ -9,6 +9,7 @@ export class PokeCardComponent implements OnInit {
 
   //Variables
   @Input() pkmn: any;
+  @Input() veoNombre: any;
   constructor() { }
 
   ngOnInit(): void {
