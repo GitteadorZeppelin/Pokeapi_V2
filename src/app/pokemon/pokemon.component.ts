@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { APikachuService } from '../servicios/a-pikachu.service';
 
 @Component({
   selector: 'app-pokemon',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonComponent implements OnInit {
 
-  constructor() { }
+  //Variables
+  pkmn: any;
+  constructor(
+    private route: ActivatedRoute,
+    private api: APikachuService
+  ) { 
+  }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.api.getPKMN(params['num']).then(datos => {
+        this.pkmn = datos; 
+      }, err=>{ //Callback de error
+        console.log(err)
+      }) 
+    });
   }
 
 }
