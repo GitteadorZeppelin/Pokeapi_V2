@@ -13,12 +13,4 @@ export class PokeCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  creoClase(tipo1 :any, tipo2:any){
-    if(tipo2 == undefined){
-      return tipo1+"-primario " + tipo1+"-secundario"
-    } else {
-      return tipo1+"-primario " + tipo2.type.name+"-secundario"
-    }
-  }
 }
