@@ -1,1 +1,74 @@
-<p>pokemon works!</p>
+<div class="container-fluid" style="font-size: 24px;">
+    <!--              -->
+    <!-- Basic Info   -->
+    <!--              -->
+    <div class="row">
+        <!-- Card -->
+        <div class="col col-3 mt-2">
+            <app-poke-card [pkmn]="pkmn" [veoNombre]="false" class="text-light"></app-poke-card>
+        </div>
+        <div class="col col-9 my-5">
+            <div class="row">
+                <!-- Nombre -->
+                <div class="col col-12">
+                    <div>
+                        <b>
+                            <h2 class="display-5 text-center">{{pkmn.name | titlecase}}</h2>
+                        </b>
+                    </div>
+                </div>
+            </div>
+            <!-- Tipos -->
+            <div class="row mt-4">
+                <div class="col col-12 text-center">
+                    Tipos
+                </div>
+            </div>
+            <div class="row d-flex justify-content-around">
+                <div class="col col-4 p-2" *ngFor="let tipo of pkmn.types">
+                    <div class="rounded text-center" [ngClass]="tipo.type.name">
+                        {{tipo.type.name | titlecase }}
+                    </div>
+                </div>
+            </div>
+            <!-- Habilidades -->
+            <div class="col col-12 mt-3">
+                <div class="row">
+                    <div class="col col-12 text-center">
+                        Habilidades
+                    </div>
+                </div>
+                <div class="row d-flex flex-row justify-content-around">
+                    <div class="col col-4 text-center" *ngFor="let habilidad of pkmn.abilities">
+                        <div class="border rounded">
+                            {{habilidad.ability.name | titlecase }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--              -->
+    <!-- ESTADISTICAS -->
+    <!--              -->
+    <div class="row">
+        <div class="col col-12 p-2">
+            <div class="row text-center">
+                <div class="col col-12">
+                    Estadísticas
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-2" *ngFor="let stat of pkmn.stats ">
+                {{stat.stat.name | titlecase}}: {{stat.base_stat}}
+                <div class="w-100 border border-dark rounded">
+                    <div [ngClass]="{'godTier': stat.base_stat > 120, 
+                        'menor120': stat.base_stat < 120 && stat.base_stat > 89, 
+                        'menor90': stat.base_stat < 90 && stat.base_stat > 49, 
+                        'menor50': stat.base_stat < 50 }">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
