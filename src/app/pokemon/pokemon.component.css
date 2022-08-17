@@ -1,0 +1,56 @@
+/*Primario*/
+.normal{
+    border:  peachpuff solid 4px;
+    background: linear-gradient(0deg, rgba(255, 218, 185, 1), rgba(255, 218, 185, 0.3) 0% 100%);
+}
+.water{
+    background: linear-gradient(0deg, rgba(30,	144, 255, 1) 0%, rgba(30, 144, 255, 0.3)  100%);
+}
+.fire{
+    border: crimson solid 4px;
+}
+.grass{
+    border: lime solid 4px;
+}
+.flying{
+    border: powderblue solid 4px;
+}
+.electric{
+    border: yellow solid 4px;
+}
+.bug{
+    border: forestgreen solid 4px;
+}
+.poison{
+    border: darkviolet solid 4px;
+}
+.fighting{
+    border:  indianred solid 4px;
+}
+.dark{
+    border: black solid 4px;
+}
+.psychic{
+    border: fuchsia solid 4px;
+}
+.ghost{
+    border: indigo solid 4px;
+}
+.steel{
+    border: grey solid 4px;
+}
+.ice{
+    border: lightcyan solid 4px;
+}
+.ground{
+    border: burlywood solid 4px;
+}
+.rock{
+    border: saddlebrown solid 4px;
+}
+.fairy{
+    border: hotpink solid 4px;
+}
+.dragon{
+    border: darkslateblue solid 4px;
+}
