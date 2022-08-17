@@ -4,7 +4,7 @@
         src="{{'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pkmn.id + '.png'}}" 
         [routerLink]="['/pokemon/', pkmn.id]">
     </div>
-    <strong>
+    <strong *ngIf="veoNombre == true">
         {{pkmn.name | titlecase}}
     </strong>
 </div>
