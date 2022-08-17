@@ -5,52 +5,60 @@
 }
 .water{
     background: linear-gradient(0deg, rgba(30,	144, 255, 1) 0%, rgba(30, 144, 255, 0.3)  100%);
+    color: whitesmoke;
 }
 .fire{
-    border: crimson solid 4px;
+    background: linear-gradient(0deg, rgba(220, 20, 60, 1) 0%, rgba(220, 20, 60, 0.3)  100%);
 }
 .grass{
-    border: lime solid 4px;
+    background: linear-gradient(0deg, rgba(0, 255, 0, 1) 0%, rgba(0, 255, 0, 0.3)  100%);
 }
 .flying{
-    border: powderblue solid 4px;
+    background: linear-gradient(0deg, rgba(176, 224, 230, 1) 0%, rgba(176, 224, 230, 0.3)  100%);
 }
 .electric{
-    border: yellow solid 4px;
+    background: linear-gradient(0deg, rgba(255, 255, 0, 1) 0%, rgba(255, 255, 0, 0.3)  100%);
 }
 .bug{
-    border: forestgreen solid 4px;
+    background: linear-gradient(0deg, rgba(34, 139, 34, 1) 0%, rgba(34, 139, 34, 0.3)  100%);
+    color: whitesmoke;
 }
 .poison{
-    border: darkviolet solid 4px;
+    background: linear-gradient(0deg, rgba(148, 0,	211, 1) 0%, rgba(148, 0, 211, 0.3)  100%);
+    color: whitesmoke;
 }
 .fighting{
-    border:  indianred solid 4px;
+    background: linear-gradient(0deg, rgba(205, 92, 92, 1) 0%, rgba(205, 92, 92, 0.3)  100%);
 }
 .dark{
-    border: black solid 4px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3)  100%);
+    color: whitesmoke;
 }
 .psychic{
-    border: fuchsia solid 4px;
+    background: linear-gradient(0deg, rgba(255, 0,	255, 1) 0%, rgba(255, 0, 255, 0.3)  100%);
 }
 .ghost{
-    border: indigo solid 4px;
+    background: linear-gradient(0deg, rgba(75,	0,	130, 1) 0%, rgba(75, 0, 130, 0.3)  100%);
+    color: whitesmoke;
 }
 .steel{
-    border: grey solid 4px;
+    background: linear-gradient(0deg, rgba(128, 128, 128, 1) 0%, rgba(128, 128, 128, 0.3)  100%);
+    color: whitesmoke;
 }
 .ice{
-    border: lightcyan solid 4px;
+    background: linear-gradient(0deg, rgba(224, 255, 255, 1) 0%, rgba(224, 255, 255, 0.3)  100%);
 }
 .ground{
-    border: burlywood solid 4px;
+    background: linear-gradient(0deg, rgba(222, 184, 135, 1) 0%, rgba(222, 184, 135, 0.3)  100%);
 }
 .rock{
-    border: saddlebrown solid 4px;
+    background: linear-gradient(0deg, rgba(139, 69, 19, 1) 0%, rgba(139, 69, 19, 0.3)  100%);
+    color: whitesmoke;
 }
 .fairy{
-    border: hotpink solid 4px;
+    background: linear-gradient(0deg, rgba(255, 105, 180, 1) 0%, rgba(255, 105, 180, 0.3)  100%);
 }
 .dragon{
-    border: darkslateblue solid 4px;
+    background: linear-gradient(0deg, rgba(72, 61,	139, 1) 0%, rgba(72, 61, 139, 0.3)  100%);
+    color: whitesmoke;
 }
