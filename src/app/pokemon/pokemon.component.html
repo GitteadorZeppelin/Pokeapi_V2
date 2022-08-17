@@ -1,13 +1,13 @@
-<div class="container-fluid" style="font-size: 24px;">
+<div class="container" style="font-size: 24px;">
     <!--              -->
     <!-- Basic Info   -->
     <!--              -->
     <div class="row">
         <!-- Card -->
-        <div class="col col-3 mt-2">
+        <div class="col col-4 mt-2">
             <app-poke-card [pkmn]="pkmn" [veoNombre]="false" class="text-light"></app-poke-card>
         </div>
-        <div class="col col-9 my-5">
+        <div class="col col-8 my-5">
             <div class="row">
                 <!-- Nombre -->
                 <div class="col col-12">
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col col-2" *ngFor="let stat of pkmn.stats ">
+            <div class="col col-2" *ngFor="let stat of pkmn.stats " style="font-size: 18px;">
                 {{stat.stat.name | titlecase}}: {{stat.base_stat}}
                 <div class="w-100 border border-dark rounded">
                     <div [ngClass]="{'godTier': stat.base_stat > 120, 
