@@ -7,13 +7,15 @@ import { PokedexComponent } from './pokedex/pokedex.component';
 import { PokeCardComponent } from './poke-card/poke-card.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PokeTipoPipe } from './pipes/poketipo.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokedexComponent,
     PokeCardComponent,
-    PokemonComponent
+    PokemonComponent,
+    PokeTipoPipe
   ],
   imports: [
     BrowserModule,
