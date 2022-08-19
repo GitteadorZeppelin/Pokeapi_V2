@@ -21,7 +21,7 @@
             <!-- Tipos -->
             <div class="row mt-4">
                 <div class="col col-12 text-center">
-                    Tipos
+                    Types
                 </div>
             </div>
             <div class="row d-flex justify-content-around">
@@ -35,13 +35,13 @@
             <div class="col col-12 mt-3">
                 <div class="row">
                     <div class="col col-12 text-center">
-                        Habilidades
+                        Abilities
                     </div>
                 </div>
                 <div class="row d-flex flex-row justify-content-around">
                     <div class="col col-4 text-center" *ngFor="let habilidad of pkmn.abilities">
                         <div class="border rounded">
-                            {{habilidad.ability.name | titlecase }}
+                            {{habilidad.ability.name | titlecase }} <span *ngIf="habilidad.is_hidden == true">⭐</span>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
         <div class="col col-12 p-2">
             <div class="row text-center">
                 <div class="col col-12">
-                    Estadísticas
+                    Stats
                 </div>
             </div>
         </div>
@@ -67,6 +67,56 @@
                         'menor120': stat.base_stat < 120 && stat.base_stat > 89, 
                         'menor90': stat.base_stat < 90 && stat.base_stat > 49, 
                         'menor50': stat.base_stat < 50 }">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--             -->
+        <!-- MOVIMIENTOS -->
+        <!--             -->
+        <div class="row d-flex justify-content-center mt-4">
+            <div class="col col-10">
+                <!--        -->
+                <!-- Header -->
+                <!--        -->
+                <div class="row fs12">
+                    <ul class="pagination mb-0">
+                        <li class="border-top border-start border-end rounded-top" [ngClass]="{'active': gen == 1}">
+                            <a class="page-link"(click)="activo(1)">1st Gen</a>
+                        </li>
+                        <li class="border-top border-start border-end rounded-top" [ngClass]="{'active': gen == 2}">
+                            <a class="page-link"(click)="activo(2)">2nd Gen</a>
+                        </li>
+                        <li class="border-top border-start border-end rounded-top" [ngClass]="{'active': gen == 3}">
+                            <a class="page-link"(click)="activo(3)">3rd Gen</a>
+                        </li>
+                        <li class="border-top border-start border-end rounded-top" [ngClass]="{'active': gen == 4}">
+                            <a class="page-link"(click)="activo(4)">4th Gen</a>
+                        </li>
+                        <li class="border-top border-start border-end rounded-top" [ngClass]="{'active': gen == 5}">
+                            <a class="page-link"(click)="activo(5)">5th Gen</a>
+                        </li>
+                        <li class="border-top border-start border-end rounded-top" [ngClass]="{'active': gen == 6}">
+                            <a class="page-link"(click)="activo(6)">6th Gen</a>
+                        </li>
+                        <li class="border-top border-start border-end rounded-top" [ngClass]="{'active': gen == 7}">
+                            <a class="page-link"(click)="activo(7)">7th Gen</a>
+                        </li>
+                        <li class="border-top border-start border-end rounded-top" [ngClass]="{'active': gen == 8}">
+                            <a class="page-link"(click)="activo(8)">8th Gen</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col col-12 border border-dark tabla-ataques rounded overflow-auto">
+                        <div class="row  position-sticky header-tabla">
+                            <div class="col col-3 border">Name</div>
+                            <div class="col col-3 border">Power/PP</div>
+                            <div class="col col-2 border">Type</div>
+                            <div class="col col-2 border">Accuracy</div>
+                            <div class="col col-2 border">generation</div>
+                        </div>
+                       <app-tabla-ataques *ngFor="let movimiento of pkmn.moves" [movimiento]="movimiento" [gen]="gen"></app-tabla-ataques>
                     </div>
                 </div>
             </div>

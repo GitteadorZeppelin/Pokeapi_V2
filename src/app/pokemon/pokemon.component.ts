@@ -11,10 +11,12 @@ export class PokemonComponent implements OnInit {
 
   //Variables
   pkmn: any;
+  gen: number;
   constructor(
     private route: ActivatedRoute,
     private api: APikachuService
   ) { 
+    this.gen = 1
   }
 
   ngOnInit(): void {
@@ -27,4 +29,7 @@ export class PokemonComponent implements OnInit {
     });
   }
 
+  activo(valor: number){
+    this.gen = valor
+  }
 }
