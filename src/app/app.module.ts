@@ -8,7 +8,6 @@ import { PokeCardComponent } from './poke-card/poke-card.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokeTipoPipe } from './pipes/poketipo.pipe';
-import { MovimientoPipe } from './pipes/movimiento.pipe';
 import { TablaAtaquesComponent } from './tabla-ataques/tabla-ataques.component';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { TablaAtaquesComponent } from './tabla-ataques/tabla-ataques.component';
     PokeCardComponent,
     PokemonComponent,
     PokeTipoPipe,
-    MovimientoPipe,
     TablaAtaquesComponent
   ],
   imports: [
@@ -26,7 +24,7 @@ import { TablaAtaquesComponent } from './tabla-ataques/tabla-ataques.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [MovimientoPipe],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
