@@ -8,6 +8,7 @@ import { PokeCardComponent } from './poke-card/poke-card.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokeTipoPipe } from './pipes/poketipo.pipe';
+import { MovimientoPipe } from './pipes/movimiento.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PokeTipoPipe } from './pipes/poketipo.pipe';
     PokedexComponent,
     PokeCardComponent,
     PokemonComponent,
-    PokeTipoPipe
+    PokeTipoPipe,
+    MovimientoPipe
   ],
   imports: [
     BrowserModule,
