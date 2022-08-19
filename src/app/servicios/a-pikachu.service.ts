@@ -16,4 +16,8 @@ export class APikachuService {
   getPKMN(id: number): Promise<any>{
     return this.http.get("https://pokeapi.co/api/v2/pokemon/" + id + "/").toPromise()
   }
+
+  getMovimiento(id: number){
+    return this.http.get("https://pokeapi.co/api/v2/move/" + id + "/").toPromise()
+  }
 }
