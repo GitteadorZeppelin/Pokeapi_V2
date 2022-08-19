@@ -1,6 +1,5 @@
 /*Fondos de los Tipos*/
 .normal{
-    border:  peachpuff solid 4px;
     background: linear-gradient(0deg, rgba(255, 218, 185, 1), rgba(255, 218, 185, 0.3) 0% 100%);
 }
 .water{
