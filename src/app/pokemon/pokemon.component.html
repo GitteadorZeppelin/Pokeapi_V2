@@ -109,12 +109,12 @@
                 </div>
                 <div class="row">
                     <div class="col col-12 border border-dark tabla-ataques rounded overflow-auto">
-                        <div class="row  position-sticky header-tabla">
+                        <div class="row position-sticky header-tabla bg-primary text-light">
                             <div class="col col-3 border">Name</div>
-                            <div class="col col-3 border">Power/PP</div>
+                            <div class="col col-3 border">Power / PP</div>
                             <div class="col col-2 border">Type</div>
                             <div class="col col-2 border">Accuracy</div>
-                            <div class="col col-2 border">generation</div>
+                            <div class="col col-2 border">Generation</div>
                         </div>
                        <app-tabla-ataques *ngFor="let movimiento of pkmn.moves" [movimiento]="movimiento" [gen]="gen"></app-tabla-ataques>
                     </div>
