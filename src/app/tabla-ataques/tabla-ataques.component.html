@@ -1,1 +1,10 @@
-<p>tabla-ataques works!</p>
+<div class="row py-2 border-bottom border-top" *ngFor="let movimiento of movimientos[gen-1]">
+    <div class="col col-3">{{movimiento.name | titlecase}}</div>
+    <div class="col col-3">
+        <span *ngIf="movimiento.power == null" class="text-danger">Status </span> 
+        {{movimiento.power}} / {{movimiento.pp}}
+    </div>
+    <div class="col col-2 rounded" [ngClass]="movimiento.type"> {{movimiento.type | titlecase}} </div>
+    <div class="col col-2">{{movimiento.accuracy}}</div>
+    <div class="col col-2">Gen. {{movimiento.generation}}</div>
+</div>
