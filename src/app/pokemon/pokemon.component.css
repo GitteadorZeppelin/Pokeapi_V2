@@ -95,3 +95,11 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+
+.fs12{
+    font-size: 12px;
+}
+
+.tabla-ataques{
+    height: 370px;
+}
