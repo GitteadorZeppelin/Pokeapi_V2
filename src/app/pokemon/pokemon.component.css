@@ -1,6 +1,6 @@
 /*Fondos de los Tipos*/
 .normal{
-    background: linear-gradient(0deg, rgba(255, 218, 185, 1), rgba(255, 218, 185, 0.3) 0% 100%);
+    background: linear-gradient(0deg, rgba(255, 218, 185, 1), rgba(255, 218, 185, 0.3) 100%);
 }
 .water{
     background: linear-gradient(0deg, rgba(30,	144, 255, 1) 0%, rgba(30, 144, 255, 0.3)  100%);
