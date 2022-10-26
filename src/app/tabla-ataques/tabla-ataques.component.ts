@@ -15,7 +15,8 @@ export class TablaAtaquesComponent implements OnInit {
   constructor(
     private apiKachu: APikachuService
   ) {
-    this.movimientos = [[],[],[],[],[],[],[],[]]
+    this.movimientos = new Array(8).fill([])
+
   }
 
   ngOnInit(): void {
@@ -29,7 +30,6 @@ export class TablaAtaquesComponent implements OnInit {
       let movFormatted: any = this.movSimplificado(datos)
       
       this.movimientos[movFormatted.generation - 1].push(movFormatted);
-      console.log(this.movimientos)
     }).catch(err => {
       console.log(err)
     })
