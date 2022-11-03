@@ -1,7 +1,15 @@
 <div class="container">
     <div class="row justify-content-around p-2">
-        <div class="col col-2"><button [disabled]="page==1" class="btn btn-block btn-info" (click)="atras()">Atrás</button></div>
-        <div class="col col-2"><button class="btn btn-block btn-info" (click)="adelante()">Adelante</button></div>
+        <div class="col col-2">
+            <button [disabled]="page==1" class="btn btn-block btn-outline-primary" (click)="atras()">
+                Atrás
+            </button>
+        </div>
+        <div class="col col-2">
+            <button class="btn btn-block btn-outline-primary" (click)="adelante()">
+                Adelante
+            </button>
+        </div>
     </div>
     <div class="row">
         <div class="col col-4 p-2" *ngFor="let pkmn of listaPkmn" >
