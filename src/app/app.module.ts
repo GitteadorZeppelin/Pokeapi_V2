@@ -9,6 +9,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokeTipoPipe } from './pipes/poketipo.pipe';
 import { TablaAtaquesComponent } from './tabla-ataques/tabla-ataques.component';
+import { ClipbgPipe } from './pipes/clipbg.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TablaAtaquesComponent } from './tabla-ataques/tabla-ataques.component';
     PokeCardComponent,
     PokemonComponent,
     PokeTipoPipe,
-    TablaAtaquesComponent
+    TablaAtaquesComponent,
+    ClipbgPipe
   ],
   imports: [
     BrowserModule,
