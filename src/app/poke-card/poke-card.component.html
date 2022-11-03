@@ -1,5 +1,5 @@
-<div class="text-center p-2" [ngClass]="pkmn | poketipo">
-    <div>
+<div class="text-center p-2" [ngClass]="pkmn | poketipo" [ngStyle]="{'background': veoNombre == true ? '' : pkmn | clipbg}">
+    <div [ngClass]="{'shaped' : veoNombre == false}">
         <img style="height: 360px;" class="w-100" 
         src="{{'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pkmn.id + '.png'}}" 
         [routerLink]="['/pokemon/', pkmn.id]">
