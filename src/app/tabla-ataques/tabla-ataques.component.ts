@@ -15,8 +15,8 @@ export class TablaAtaquesComponent implements OnInit {
   constructor(
     private apiKachu: APikachuService
   ) {
-    this.movimientos = new Array(8).fill([])
-
+    /* this.movimientos = [[], [], [], [], [], [], [], []]; */
+    this.movimientos = Array.from({length: 8}, ()=> ([]))
   }
 
   ngOnInit(): void {
@@ -26,9 +26,7 @@ export class TablaAtaquesComponent implements OnInit {
   formateoGuay(movimiento: any) {
     let aux = movimiento.move.url.split("/")
     this.apiKachu.getMovimiento(parseInt(aux[6])).then(datos => {
-      
       let movFormatted: any = this.movSimplificado(datos)
-      
       this.movimientos[movFormatted.generation - 1].push(movFormatted);
     }).catch(err => {
       console.log(err)
@@ -46,6 +44,4 @@ export class TablaAtaquesComponent implements OnInit {
       generation: gen[6]
     };
   }
-
-  /* console.log(this.movimientos) */
 }
