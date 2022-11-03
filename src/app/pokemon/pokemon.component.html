@@ -41,7 +41,10 @@
                 <div class="row d-flex flex-row justify-content-around">
                     <div class="col col-4 text-center" *ngFor="let habilidad of pkmn.abilities">
                         <div class="border rounded">
-                            {{habilidad.ability.name | titlecase }} <span *ngIf="habilidad.is_hidden == true">⭐</span>
+                            {{habilidad.ability.name | titlecase }} 
+                            <span *ngIf="habilidad.is_hidden == true">
+                                <i class="fa-solid fa-star" style="color: gold;"></i>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -62,8 +65,8 @@
         <div class="row">
             <div class="col col-2" *ngFor="let stat of pkmn.stats " style="font-size: 18px;">
                 {{stat.stat.name | titlecase}}: {{stat.base_stat}}
-                <div class="w-100 border border-dark rounded">
-                    <div [ngClass]="{'godTier': stat.base_stat > 120, 
+                <div class="w-100 rounded">
+                    <div [ngClass]="{'godTier': stat.base_stat >= 120, 
                         'menor120': stat.base_stat < 120 && stat.base_stat > 89, 
                         'menor90': stat.base_stat < 90 && stat.base_stat > 49, 
                         'menor50': stat.base_stat < 50 }">
